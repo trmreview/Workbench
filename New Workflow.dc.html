@@ -758,7 +758,8 @@ class Component extends DCLogic {
         if (e.dataTransfer.getData("text/plain") !== "action") { this.setState({ dragActive: false }); return; }
         const p = this._dragPayload || { label: "Action", svgHtml: "" };
         const iconHtml = (p.svgHtml || "").replace(/#9aa7b5/g, "#ffffff");
-        const { lx, ly } = this.toLayerCoords(e.currentTarget.getBoundingClientRect(), e.clientX, e.clientY);
+        const canvasEl = document.querySelector("[data-canvas]") || e.currentTarget;
+        const { lx, ly } = this.toLayerCoords(canvasEl.getBoundingClientRect(), e.clientX, e.clientY);
         this.setState(s => ({
           dragActive: false,
           droppedNodes: [
