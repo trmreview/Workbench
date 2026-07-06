@@ -52,7 +52,7 @@ const CF_PORTS = [['Success','#16a34a'],['No Answer','#94a2b3'],['Busy','#94a2b3
 
 const SPEC_ROWS = [
   {name:'Description',req:true,component:'Textarea',limit:'1–200 characters',def:'힌트문구: Description',validation:'미 입력',error:'This is required.',description:'Internal label describing what this Forward Call step does within the workflow.'},
-  {name:'Forward Calls To',req:true,component:'Dropdown (select)',limit:'—',def:'None selected',validation:'선택하지 않음',error:'This is required.',description:'The destination phone number that the incoming call is forwarded to.'},
+  {name:'Forward Calls To',req:true,component:'Dropdown (select)',limit:'—',def:'기본 전화번호',validation:'선택하지 않음',error:'This is required.',description:'The destination phone number that the incoming call is forwarded to.'},
   {name:'Caller ID',req:false,component:'Input (read-only)',limit:'—',def:'System value',validation:'Auto-populated and non-editable. No user input.',error:'',description:'The caller ID presented on the forwarded leg. Managed by the system; cannot be edited.'},
   {name:'Hide Caller ID',req:false,component:'Toggle',limit:'—',def:'Off',validation:'Boolean. Defaults to Off.',error:'',description:'When on, hides the caller ID presented to the recipient (privacy="true").'},
   {name:'Caller Display Name',req:false,component:'Input (text)',limit:'Max 256 characters',def:'공란',validation:'Optional. Must be ≤ 256 characters.',error:'Caller display name must be 256 characters or fewer.',description:'Custom display name shown to the recipient when the call is created.'},
