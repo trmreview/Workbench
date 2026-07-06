@@ -545,7 +545,7 @@ class Component extends DCLogic {
   componentDidMount() { this.wireCards(); }
   componentDidUpdate() { this.wireCards(); }
 
-  // make every action card in the panel draggable (event delegation, idempotent)
+  // make every action card in the panel draggable via pointer events (reliable on GitHub Pages)
   wireCards() {
     const panel = document.querySelector("[data-action-panel]");
     if (!panel) return;
@@ -556,21 +556,49 @@ class Component extends DCLogic {
     cards.forEach(card => {
       if (card.dataset.dragWired) return;
       card.dataset.dragWired = "1";
-      card.setAttribute("draggable", "true");
       card.style.cursor = "grab";
-      card.addEventListener("dragstart", (e) => {
-        const svg = card.querySelector("svg");
-        const span = card.querySelector("span");
-        this._dragPayload = {
-          label: span ? span.textContent.trim() : "Action",
-          svgHtml: svg ? svg.outerHTML : "",
-        };
-        e.dataTransfer.setData("text/plain", "action");
-        e.dataTransfer.effectAllowed = "copy";
-        this.setState({ dragActive: true });
-      });
-      card.addEventListener("dragend", () => this.setState({ dragActive: false }));
+      card.addEventListener("mousedown", (e) => this.startCardDrag(card, e));
     });
+  }
+
+  startCardDrag(card, e) {
+    if (e.button !== 0) return;
+    e.preventDefault();
+    const svgEl = card.querySelector("svg");
+    const span = card.querySelector("span");
+    const payload = { label: span ? span.textContent.trim() : "Action", svgHtml: svgEl ? svgEl.outerHTML : "" };
+    const canvasEl = document.querySelector("[data-canvas]");
+
+    const ghost = document.createElement("div");
+    ghost.style.cssText = "position:fixed;z-index:2147483000;pointer-events:none;display:flex;align-items:center;gap:8px;padding:8px 12px;background:#fff;border:1px solid #2f6fed;border-radius:8px;box-shadow:0 8px 24px rgba(15,23,42,.22);font:600 12px/1 var(--font-body,sans-serif);color:#16233a;opacity:.95;";
+    var gicon = (payload.svgHtml || "").replace(/#9aa7b5/g, "#2f6fed").replace(/width=\"22\"/, 'width="16"').replace(/height=\"22\"/, 'height="16"');
+    ghost.innerHTML = gicon + "<span>" + payload.label + "</span>";
+    document.body.appendChild(ghost);
+    this.setState({ dragActive: true });
+
+    const over = (x, y) => { const r = canvasEl.getBoundingClientRect(); return x >= r.left && x <= r.right && y >= r.top && y <= r.bottom; };
+    const move = (ev) => { ghost.style.left = (ev.clientX + 12) + "px"; ghost.style.top = (ev.clientY + 12) + "px"; this.setState({ dragActive: over(ev.clientX, ev.clientY) }); };
+    const up = (ev) => {
+      document.removeEventListener("mousemove", move);
+      document.removeEventListener("mouseup", up);
+      ghost.remove();
+      if (over(ev.clientX, ev.clientY)) {
+        const iconHtml = (payload.svgHtml || "").replace(/#9aa7b5/g, "#ffffff");
+        const { lx, ly } = this.toLayerCoords(canvasEl.getBoundingClientRect(), ev.clientX, ev.clientY);
+        this.setState(s => ({
+          dragActive: false,
+          droppedNodes: [
+            ...s.droppedNodes,
+            { id: Date.now(), left: Math.round(lx - 127), top: Math.round(ly - 32), num: 3 + s.droppedNodes.length, label: payload.label, iconHtml: { __html: iconHtml } },
+          ],
+        }));
+      } else {
+        this.setState({ dragActive: false });
+      }
+    };
+    move(e);
+    document.addEventListener("mousemove", move);
+    document.addEventListener("mouseup", up);
   }
 
   // pointer-drag a placed tile to reposition it (zoom-aware)

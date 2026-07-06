@@ -80,10 +80,9 @@ function buildPanel(){
     const grid = document.createElement('div'); grid.className='card-grid';
     sec.cards.forEach(card=>{
       const el = document.createElement('div');
-      el.className='action-card'; el.setAttribute('draggable','true');
+      el.className='action-card';
       el.innerHTML = svg(card.icon) + '<span>'+card.label+'</span>';
-      el.addEventListener('dragstart', e=>{ dragPayload={label:card.label, icon:card.icon}; e.dataTransfer.effectAllowed='copy'; e.dataTransfer.setData('text/plain','action'); canvas.classList.add('dragover'); });
-      el.addEventListener('dragend', ()=> canvas.classList.remove('dragover'));
+      el.addEventListener('mousedown', e=>startCardDrag(card, e));
       grid.appendChild(el);
     });
     root.appendChild(grid);
@@ -228,14 +227,31 @@ function startConn(n, portIndex, e){
 }
 
 // ===== Drop =====
-canvas.addEventListener('dragover', e=>{ e.preventDefault(); e.dataTransfer.dropEffect='copy'; });
-canvas.addEventListener('drop', e=>{
-  e.preventDefault(); canvas.classList.remove('dragover');
-  if(e.dataTransfer.getData('text/plain')!=='action' || !dragPayload) return;
-  const p=toLayer(e.clientX, e.clientY);
-  nodes.push({ id:Date.now(), label:dragPayload.label, icon:dragPayload.icon, left:Math.round(p.x-127), top:Math.round(p.y-32), num:nextNum++, config:null });
-  dragPayload=null; render();
-});
+// ===== Pointer-based drag to add a tile (works everywhere incl. GitHub Pages) =====
+function startCardDrag(card, e){
+  if(e.button!==0) return;
+  e.preventDefault();
+  // floating ghost that follows the cursor
+  const ghost = document.createElement('div');
+  ghost.style.cssText = 'position:fixed;z-index:2147483000;pointer-events:none;display:flex;align-items:center;gap:8px;padding:8px 12px;background:#fff;border:1px solid #2f6fed;border-radius:8px;box-shadow:0 8px 24px rgba(15,23,42,.22);font:600 12px/1 var(--font-body);color:#16233a;opacity:.95;';
+  ghost.innerHTML = svg(card.icon,{size:16,stroke:'#2f6fed'}) + '<span>'+card.label+'</span>';
+  document.body.appendChild(ghost);
+  let dropped=false;
+  const move=ev=>{ ghost.style.left=(ev.clientX+12)+'px'; ghost.style.top=(ev.clientY+12)+'px'; canvas.classList.toggle('dragover', overCanvas(ev.clientX,ev.clientY)); };
+  const up=ev=>{
+    document.removeEventListener('mousemove',move); document.removeEventListener('mouseup',up);
+    ghost.remove(); canvas.classList.remove('dragover');
+    if(overCanvas(ev.clientX,ev.clientY)){
+      const p=toLayer(ev.clientX, ev.clientY);
+      nodes.push({ id:Date.now(), label:card.label, icon:card.icon, left:Math.round(p.x-127), top:Math.round(p.y-32), num:nextNum++, config:null });
+      render();
+    }
+  };
+  move(e);
+  document.addEventListener('mousemove',move); document.addEventListener('mouseup',up);
+}
+function overCanvas(x,y){ const r=canvas.getBoundingClientRect(); return x>=r.left && x<=r.right && y>=r.top && y<=r.bottom; }
+
 canvas.addEventListener('click', e=>{ if(e.target===canvas||e.target===nodesLayer||e.target===connLayer){ selectedId=null; closeDrawer(); render(); } });
 
 // ===== Zoom toolbar =====
