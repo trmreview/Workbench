@@ -96,6 +96,7 @@ button{font-family:inherit;}
 .section-label{font-size:13.5px;font-weight:600;color:var(--ink-800);margin-bottom:11px;}
 .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px;}
 .action-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:grab;background:#fff;}
+.action-card *{pointer-events:none;}
 .action-card span{font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;}
 .action-card svg{transition:stroke .12s ease;}
 .action-card:hover{background:#eef4ff;border-color:var(--info-500);}
