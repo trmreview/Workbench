@@ -128,9 +128,7 @@
           <div onClick="{{ node.onSelect }}" onMouseDown="{{ node.onMoveStart }}" style="position:absolute;width:255px;left:{{ node.left }}px;top:{{ node.top }}px;cursor:move;">
             <div style="position:absolute;left:50%;top:-7px;transform:translateX(-50%);width:13px;height:13px;border-radius:50%;background:#fff;border:2px solid var(--neutral-300);z-index:3;"></div>
             <div style="position:relative;display:flex;background:#ffffff;border:1px solid {{ node.borderColor }};border-radius:6px;box-shadow:{{ node.shadow }};overflow:hidden;height:64px;">
-              <div style="flex:none;width:60px;background:#6c5ce7;display:flex;align-items:center;justify-content:center;color:#fff;">
-                <span dangerouslySetInnerHTML="{{ node.iconHtml }}" style="display:flex;align-items:center;justify-content:center;"></span>
-              </div>
+              <div style="flex:none;width:60px;background:#6c5ce7;display:flex;align-items:center;justify-content:center;color:#fff;">{{ node.iconEl }}</div>
               <div style="flex:1;padding:11px 14px;display:flex;flex-direction:column;justify-content:center;position:relative;">
                 <div style="font-size:14px;font-weight:600;color:var(--ink-900);">{{ node.label }}</div>
                 <div style="font-size:12.5px;color:var(--neutral-400);margin-top:2px;">{{ node.subtitle }}</div>
@@ -589,7 +587,7 @@ class Component extends DCLogic {
           dragActive: false,
           droppedNodes: [
             ...s.droppedNodes,
-            { id: Date.now(), left: Math.round(lx - 127), top: Math.round(ly - 32), num: 3 + s.droppedNodes.length, label: payload.label, iconHtml: { __html: iconHtml } },
+            { id: Date.now(), left: Math.round(lx - 127), top: Math.round(ly - 32), num: 3 + s.droppedNodes.length, label: payload.label, iconStr: iconHtml },
           ],
         }));
       } else {
@@ -711,6 +709,7 @@ class Component extends DCLogic {
         isCF: n.label === "Forward Call",
         notCF: n.label !== "Forward Call",
         showSinglePort: n.label !== "Forward Call" && n.label !== "End",
+        iconEl: React.createElement("span", { style: { display: "flex", alignItems: "center", justifyContent: "center" }, dangerouslySetInnerHTML: { __html: n.iconStr || "" } }),
         subtitle: (n.label === "Forward Call" && n.config && n.config.to) ? ("Forward to " + n.config.to) : (["End", "Hang up"].includes(n.label) ? "" : "Click to configure"),
         outPorts: portMeta.map((m, i) => ({ name: m[0], color: m[1], onDown: (e) => this.startConn(n, i, e) })),
         onSinglePortDown: (e) => this.startConn(n, 0, e),
