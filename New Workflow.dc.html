@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<template id="__bundler_thumbnail" data-bg-color="#edf1f5">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#edf1f5"/>
+    <rect x="470" y="150" width="260" height="90" rx="10" fill="#ffffff" stroke="#dfe4ea" stroke-width="3"/>
+    <circle cx="510" cy="195" r="22" fill="#dfe4ea"/>
+    <rect x="545" y="180" width="150" height="14" rx="7" fill="#cbd5e1"/>
+    <rect x="545" y="205" width="100" height="12" rx="6" fill="#e2e8f0"/>
+    <path d="M600 240 L600 360" stroke="#94a3b8" stroke-width="3" fill="none"/>
+    <circle cx="600" cy="420" r="40" fill="#6c5ce7"/>
+    <path d="M585 405 h12 l5 14 -7 5 a20 20 0 0 0 18 18 l5 -7 14 5 v12 a7 7 0 0 1 -7 7 a52 52 0 0 1 -52 -52 a7 7 0 0 1 7 -7Z" fill="#ffffff"/>
+    <rect x="640" y="385" width="200" height="70" rx="10" fill="#ffffff" stroke="#dfe4ea" stroke-width="3"/>
+    <rect x="660" y="405" width="120" height="14" rx="7" fill="#1f2937"/>
+    <rect x="660" y="428" width="80" height="12" rx="6" fill="#e2e8f0"/>
+    <g>
+      <circle cx="660" cy="490" r="12" fill="#fff" stroke="#16a34a" stroke-width="4"/>
+      <circle cx="700" cy="490" r="12" fill="#fff" stroke="#9aa7b5" stroke-width="4"/>
+      <circle cx="740" cy="490" r="12" fill="#fff" stroke="#9aa7b5" stroke-width="4"/>
+      <circle cx="780" cy="490" r="12" fill="#fff" stroke="#e0463b" stroke-width="4"/>
+    </g>
+  </svg>
+</template>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/individual-contacts-fb83c327-3bd9-4a7e-9e03-ae72680c9760/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/individual-contacts-fb83c327-3bd9-4a7e-9e03-ae72680c9760/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/individual-contacts-fb83c327-3bd9-4a7e-9e03-ae72680c9760/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/individual-contacts-fb83c327-3bd9-4a7e-9e03-ae72680c9760/tokens/effects.css">
+  <link rel="stylesheet" href="_ds/individual-contacts-fb83c327-3bd9-4a7e-9e03-ae72680c9760/styles.css">
+  <script src="_ds/individual-contacts-fb83c327-3bd9-4a7e-9e03-ae72680c9760/_ds_bundle.js"></script>
+  <script src="comments.js"></script>
+  <style>
+    *{box-sizing:border-box;}
+    html,body{margin:0;height:100%;overflow:hidden;}
+    body{font-family:var(--font-body);color:var(--ink-900);}
+    .cf-port-label{opacity:0;transition:opacity .12s ease;pointer-events:none;}
+    .cf-port:hover .cf-port-label{opacity:1;}
+    .action-card svg{transition:stroke .12s ease;}
+    .action-card:hover{background:#eef4ff !important;border-color:#2f6fed !important;}
+    .action-card:hover svg{stroke:#2f6fed;}
+    .cf-port-label::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);border:5px solid transparent;border-top-color:#1f2937;}
+  </style>
+</helmet>
+
+<div style="position:relative;display:flex;flex-direction:column;height:100vh;width:100%;background:#ffffff;font-family:var(--font-body);overflow:hidden;">
+
+  <!-- ===== HEADER ===== -->
+  <div style="flex:none;padding:14px 28px 0 28px;background:#ffffff;">
+    <div style="font-size:12.5px;color:var(--neutral-500);display:flex;align-items:center;gap:7px;">
+      <span>Automation</span>
+      <span style="color:var(--neutral-300);">&#8250;</span>
+      <span style="text-decoration:underline;color:var(--neutral-500);cursor:pointer;">Workbench</span>
+      <span style="color:var(--neutral-300);">&#8250;</span>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:6px;">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <button style="background:none;border:none;padding:4px;cursor:pointer;color:var(--ink-900);display:flex;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </button>
+        <h1 style="margin:0;font-size:25px;font-weight:700;letter-spacing:-0.01em;color:var(--ink-900);">Voice: Call Forward</h1>
+      </div>
+      <button style="background:#2f6fed;color:#fff;border:none;border-radius:5px;padding:0 22px;height:40px;font-size:14.5px;font-weight:600;font-family:var(--font-body);cursor:pointer;box-shadow:var(--shadow-xs);" style-hover="background:#1c4fc0;">Activate</button>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:flex-end;gap:9px;margin-top:8px;font-size:12.5px;color:var(--neutral-500);">
+      <span>Last saved on Jun 22, 2026 06:43 PM</span>
+      <span style="width:8px;height:8px;border-radius:50%;background:var(--neutral-400);display:inline-block;"></span>
+      <span>Draft</span>
+    </div>
+  </div>
+
+  <!-- ===== TABS ===== -->
+  <div style="flex:none;display:flex;align-items:stretch;gap:0;padding:0 28px 0 0;border-top:1px solid var(--neutral-150);border-bottom:1px solid var(--neutral-150);background:#ffffff;margin-top:10px;">
+    <div style="padding:14px 18px;font-size:14.5px;font-weight:600;color:#2f6fed;background:#edf1f5;border-top:2.5px solid #2f6fed;margin-top:-1px;cursor:pointer;">Workflow</div>
+    <div style="width:1px;background:var(--neutral-200);"></div>
+    <div style="padding:14px 18px;font-size:14.5px;font-weight:500;color:var(--ink-800);cursor:pointer;">Settings</div>
+    <div style="width:1px;background:var(--neutral-200);"></div>
+    <div style="padding:14px 18px;font-size:14.5px;font-weight:500;color:var(--neutral-400);cursor:default;">Reports</div>
+  </div>
+
+  <!-- ===== BODY ===== -->
+  <div style="flex:1;display:flex;min-height:0;position:relative;">
+
+    <!-- ===== CANVAS ===== -->
+    <div data-canvas="1" onClick="{{ onCanvasClick }}" onDragOver="{{ onCanvasDragOver }}" onDrop="{{ onCanvasDrop }}" style="position:relative;flex:1;background:#edf1f5;overflow:hidden;outline:{{ dropOutline }};outline-offset:-3px;">
+
+      <!-- tiles / alert chip -->
+      <div style="position:absolute;top:18px;left:20px;display:flex;align-items:center;gap:0;background:#ffffff;border:1px solid var(--neutral-200);border-radius:5px;font-size:12.5px;box-shadow:var(--shadow-xs);overflow:hidden;">
+        <span style="padding:7px 12px;color:var(--neutral-600);white-space:nowrap;">Tiles&nbsp;&nbsp;{{ tileCount }} / 1000</span>
+        <span style="width:1px;height:18px;background:var(--neutral-200);"></span>
+        <span style="padding:7px 12px;color:var(--neutral-600);display:flex;align-items:center;gap:7px;white-space:nowrap;">Alert
+          <span style="background:#e0463b;color:#fff;border-radius:4px;min-width:18px;height:18px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;padding:0 5px;">1</span>
+        </span>
+      </div>
+
+      <!-- nodes layer -->
+      <div style="position:absolute;inset:0;transform:{{ nodesTransform }};transform-origin:center top;">
+
+        {{ connectionsSvg }}
+
+        <!-- Contact Trigger node -->
+        <div onMouseDown="{{ trigger.onMoveStart }}" style="position:absolute;width:255px;left:{{ trigger.left }}px;top:{{ trigger.top }}px;cursor:move;">
+          <div style="position:relative;display:flex;background:#ffffff;border:1px solid var(--neutral-200);border-radius:6px;box-shadow:var(--shadow-sm);overflow:hidden;height:64px;">
+            <div style="flex:none;width:60px;background:#dfe4ea;display:flex;align-items:center;justify-content:center;">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="#aeb8c4"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-8 2.6-8 5.8V22h16v-2.2c0-3.2-3.6-5.8-8-5.8Z"></path></svg>
+            </div>
+            <div style="flex:1;padding:11px 14px;display:flex;flex-direction:column;justify-content:center;position:relative;">
+              <div style="font-size:14px;font-weight:600;color:var(--ink-900);">Contact Trigger</div>
+              <div style="font-size:12.5px;color:var(--ink-900);margin-top:2px;">Incoming Call</div>
+              <div style="position:absolute;right:10px;bottom:7px;font-size:12px;color:var(--neutral-400);">1</div>
+            </div>
+          </div>
+          <!-- bottom output port -->
+          <div onMouseDown="{{ trigger.onPortDown }}" style="position:absolute;left:50%;bottom:-7px;transform:translateX(-50%);width:13px;height:13px;border-radius:50%;background:#fff;border:2px solid var(--neutral-300);cursor:crosshair;z-index:4;"></div>
+        </div>
+
+        <!-- dropped Call Forward nodes -->
+        <sc-for list="{{ droppedNodes }}" as="node" hint-placeholder-count="0">
+          <div onClick="{{ node.onSelect }}" onMouseDown="{{ node.onMoveStart }}" style="position:absolute;width:255px;left:{{ node.left }}px;top:{{ node.top }}px;cursor:move;">
+            <div style="position:absolute;left:50%;top:-7px;transform:translateX(-50%);width:13px;height:13px;border-radius:50%;background:#fff;border:2px solid var(--neutral-300);z-index:3;"></div>
+            <div style="position:relative;display:flex;background:#ffffff;border:1px solid {{ node.borderColor }};border-radius:6px;box-shadow:{{ node.shadow }};overflow:hidden;height:64px;">
+              <div style="flex:none;width:60px;background:#6c5ce7;display:flex;align-items:center;justify-content:center;color:#fff;">
+                <span dangerouslySetInnerHTML="{{ node.iconHtml }}" style="display:flex;align-items:center;justify-content:center;"></span>
+              </div>
+              <div style="flex:1;padding:11px 14px;display:flex;flex-direction:column;justify-content:center;position:relative;">
+                <div style="font-size:14px;font-weight:600;color:var(--ink-900);">{{ node.label }}</div>
+                <div style="font-size:12.5px;color:var(--neutral-400);margin-top:2px;">{{ node.subtitle }}</div>
+                <div style="position:absolute;right:10px;bottom:7px;font-size:12px;color:var(--neutral-400);">{{ node.num }}</div>
+              </div>
+            </div>
+            <!-- delete icon (visible when selected) -->
+            <div onClick="{{ node.onDelete }}" title="Delete" style="position:absolute;top:-11px;right:-11px;width:24px;height:24px;border-radius:50%;background:#e0463b;display:{{ node.deleteDisplay }};align-items:center;justify-content:center;cursor:pointer;box-shadow:var(--shadow-sm);z-index:5;" style-hover="background:#c23a30">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6M14 11v6"></path><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"></path></svg>
+            </div>
+            <!-- bottom output ports -->
+            <sc-if value="{{ node.isCF }}" hint-placeholder-val="{{ false }}">
+              <div style="position:absolute;left:50%;bottom:-7px;transform:translateX(-50%);display:flex;gap:12px;z-index:4;">
+                <sc-for list="{{ node.outPorts }}" as="port" hint-placeholder-count="5">
+                  <div class="cf-port" style="position:relative;display:flex;align-items:center;justify-content:center;">
+                    <span onMouseDown="{{ port.onDown }}" style="width:14px;height:14px;border-radius:50%;background:#fff;border:1.5px solid {{ port.color }};cursor:crosshair;"></span>
+                    <span class="cf-port-label" style="position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#1f2937;color:#fff;font-size:10px;font-weight:500;padding:4px 9px;border-radius:6px;white-space:nowrap;box-shadow:0 2px 8px rgba(15,23,42,.25);">{{ port.name }}</span>
+                  </div>
+                </sc-for>
+              </div>
+            </sc-if>
+            <sc-if value="{{ node.showSinglePort }}" hint-placeholder-val="{{ true }}">
+              <div onMouseDown="{{ node.onSinglePortDown }}" style="position:absolute;left:50%;bottom:-7px;transform:translateX(-50%);width:13px;height:13px;border-radius:50%;background:#fff;border:2px solid var(--neutral-300);cursor:crosshair;z-index:4;"></div>
+            </sc-if>
+          </div>
+        </sc-for>
+
+      </div>
+
+      <!-- left vertical toolbar -->
+      <div style="position:absolute;left:18px;top:50%;transform:translateY(-60%);display:flex;flex-direction:column;gap:2px;color:var(--neutral-600);">
+        <button style="width:30px;height:30px;background:none;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;color:inherit;border-radius:5px;" style-hover="background:rgba(255,255,255,.7)" onClick="{{ zoomIn }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
+        <button style="width:30px;height:30px;background:none;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;color:inherit;border-radius:5px;" style-hover="background:rgba(255,255,255,.7)" onClick="{{ zoomOut }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg></button>
+        <button style="width:30px;height:30px;background:none;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;color:inherit;border-radius:5px;" style-hover="background:rgba(255,255,255,.7)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="7" y1="12" x2="17" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg></button>
+        <button style="width:30px;height:30px;background:none;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;color:inherit;border-radius:5px;" style-hover="background:rgba(255,255,255,.7)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><line x1="4" y1="10" x2="20" y2="10"></line></svg></button>
+        <button style="width:30px;height:30px;background:none;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;color:inherit;border-radius:5px;" style-hover="background:rgba(255,255,255,.7)" onClick="{{ resetZoom }}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 9 4 4 9 4"></polyline><polyline points="20 9 20 4 15 4"></polyline><polyline points="4 15 4 20 9 20"></polyline><polyline points="20 15 20 20 15 20"></polyline></svg></button>
+        <button style="width:30px;height:30px;background:none;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;color:inherit;border-radius:5px;" style-hover="background:rgba(255,255,255,.7)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"></path><polyline points="7 11 12 16 17 11"></polyline><line x1="5" y1="20" x2="19" y2="20"></line></svg></button>
+      </div>
+
+      <!-- minimap -->
+      <div style="position:absolute;left:18px;bottom:24px;width:138px;height:96px;background:#ffffff;border:1px solid var(--neutral-200);border-radius:4px;box-shadow:var(--shadow-sm);">
+        <div style="position:absolute;left:40px;top:34px;width:42px;height:20px;border:1px solid var(--neutral-300);border-radius:2px;"></div>
+      </div>
+
+    </div>
+
+    <!-- ===== ACTIONS PANEL ===== -->
+    <div style="position:relative;flex:none;width:{{ panelWidth }};border-left:1px solid var(--neutral-150);background:#ffffff;overflow:visible;transition:width .2s var(--ease-standard);">
+
+      <!-- open/close toggle -->
+      <button onClick="{{ togglePanel }}" title="Toggle Actions panel" style="position:absolute;left:-15px;top:18px;width:30px;height:30px;border-radius:50%;background:#fff;border:1px solid var(--neutral-200);box-shadow:var(--shadow-sm);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--neutral-600);z-index:20;" style-hover="background:var(--neutral-50);color:#2f6fed">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="transform:{{ chevronTransform }};transition:transform .2s var(--ease-standard);"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+
+      <div data-action-panel="1" style="height:100%;overflow-y:auto;padding:18px 22px 40px 22px;width:330px;">
+        <h2 style="margin:0 0 18px;font-size:17px;font-weight:600;color:var(--ink-900);">Actions</h2>
+
+        <!-- Flow Controls -->
+        <div style="font-size:13.5px;font-weight:600;color:var(--ink-800);margin-bottom:11px;">Flow Controls</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px;">
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"></path><polyline points="3 4 3 8.5 7.5 8.5"></polyline><polyline points="12 7 12 12 15.5 14"></polyline></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Pause</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14"></polyline></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Wait for Condition</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="5" rx="1"></rect><rect x="3" y="16" width="6" height="5" rx="1"></rect><rect x="15" y="16" width="6" height="5" rx="1"></rect><path d="M12 8v4M12 12H6v4M12 12h6v4"></path></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Branch</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V11"></path><path d="M12 11C12 7 9 5 5 5"></path><path d="M12 11c0-4 3-6 7-6"></path><circle cx="5" cy="4" r="1.6"></circle><circle cx="19" cy="4" r="1.6"></circle><circle cx="12" cy="21" r="1.6"></circle></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Split</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="8 3 16 3 21 8 21 16 16 21 8 21 3 16 3 8"></polygon></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">End</span>
+          </div>
+        </div>
+
+        <!-- Send Messages -->
+        <div style="font-size:13.5px;font-weight:600;color:var(--ink-800);margin-bottom:11px;">Send Messages</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px;">
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-4 3v-3H4z"></path></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Send Text Message</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><polyline points="4 7 12 13 20 7"></polyline></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Send Email</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><line x1="9" y1="8" x2="15" y2="8"></line><line x1="9" y1="12" x2="15" y2="12"></line><line x1="9" y1="16" x2="13" y2="16"></line></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Ask Question</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M10.5 21a1.8 1.8 0 0 0 3 0"></path></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Workflow Alert SMS</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"></rect><polyline points="4 8 12 14 20 8"></polyline><circle cx="19" cy="6" r="3" fill="#9aa7b5" stroke="none"></circle></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Workflow Alert Email</span>
+          </div>
+        </div>
+
+        <!-- Voice -->
+        <div style="font-size:13.5px;font-weight:600;color:var(--ink-800);margin-bottom:11px;">Voice</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px;">
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.5l1.4 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.4V19a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z"></path><polyline points="15 4 21 4 21 10"></polyline><line x1="21" y1="4" x2="15.5" y2="9.5"></line></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Forward Call</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11c5.5-4 12.5-4 18 0l-2.2 2.5-3.2-1.2c-.4-.15-.7-.5-.7-.95V9.6c-2.6-.8-5.2-.8-7.8 0v1.2c0 .45-.3.8-.7.95L3.2 13 3 11Z"></path><line x1="4" y1="20" x2="20" y2="20"></line></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Hang up</span>
+          </div>
+        </div>
+
+
+        <!-- Contacts -->
+        <div style="font-size:13.5px;font-weight:600;color:var(--ink-800);margin-bottom:11px;">Contacts</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px;">
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"></circle><path d="M5.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M19 4.5A6 6 0 0 0 6 6"></path><polyline points="19 2 19 5 16 5"></polyline></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Update Contact</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v10"></path><polyline points="8 9 12 13 16 9"></polyline><path d="M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2"></path></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Data Capture</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"></circle><path d="M3 20a6 6 0 0 1 12 0"></path><line x1="19" y1="8" x2="19" y2="14"></line><line x1="16" y1="11" x2="22" y2="11"></line></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Add to List</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="3.5"></circle><path d="M4 20a6 6 0 0 1 12 0"></path><circle cx="18" cy="11" r="4"></circle><line x1="15.2" y1="13.8" x2="20.8" y2="8.2"></line></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Block/Delete a Contact</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17V9a2 2 0 0 1 2-2h11"></path><polyline points="14 4 18 7.5 14 11"></polyline><path d="M9 20h9"></path></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Jump to Workflow</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3H5a2 2 0 0 0-2 2v6l8 8a2 2 0 0 0 3 0l5-5a2 2 0 0 0 0-3l-8-8Z"></path><circle cx="7.5" cy="7.5" r="1.2"></circle><line x1="16" y1="5" x2="22" y2="5"></line><line x1="19" y1="2" x2="19" y2="8"></line></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Add Tag</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H5a2 2 0 0 0-2 2v6l8 8a2 2 0 0 0 3 0l5-5a2 2 0 0 0 0-3l-8-8Z"></path><circle cx="7.5" cy="8.5" r="1.2"></circle><line x1="16" y1="6" x2="22" y2="6"></line></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Remove Tag</span>
+          </div>
+        </div>
+
+        <!-- API & Integration -->
+        <div style="font-size:13.5px;font-weight:600;color:var(--ink-800);margin-bottom:11px;">API &amp; Integration</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a4 4 0 0 1-.5-7.96A5 5 0 0 1 16 9.5a3.5 3.5 0 0 1 .5 7H7Z"></path></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Create/Update a Salesforce Object</span>
+          </div>
+          <div class="action-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:15px 6px;border:1px solid var(--neutral-150);border-radius:6px;cursor:pointer;background:#fff;" style-hover="background:#eef4ff;border-color:#2f6fed">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#9aa7b5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.5"></circle><circle cx="18" cy="9" r="2.5"></circle><circle cx="9" cy="18" r="2.5"></circle><path d="M8 7l8 1.4M16.5 11l-6 5"></path></svg>
+            <span style="font-size:11px;color:var(--neutral-600);text-align:center;line-height:1.25;">Send Webhook</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== CALL FORWARD CONFIG DRAWER ===== -->
+  <div style="position:absolute;top:0;right:0;bottom:0;width:440px;max-width:92%;background:#ffffff;box-shadow:-12px 0 32px rgba(15,23,42,.14);border-left:1px solid var(--neutral-150);display:flex;flex-direction:column;z-index:60;transform:{{ modalTransform }};transition:transform .28s var(--ease-standard);">
+
+      <!-- drawer header -->
+      <div style="flex:none;display:flex;align-items:flex-start;gap:13px;padding:18px 20px;border-bottom:1px solid var(--neutral-150);">
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:16px;font-weight:700;color:var(--ink-900);">Forward Call</div>
+          <div style="font-size:12px;color:var(--ink-800);font-weight:600;margin-top:5px;background:var(--neutral-100);border:1px solid var(--neutral-150);padding:8px 11px;border-radius:7px;line-height:1.45;">Forward incoming calls to another number based on your workflow configuration.</div>
+        </div>
+      </div>
+
+      <!-- drawer body -->
+      <div style="flex:1;overflow-y:auto;padding:20px 20px 8px;display:flex;flex-direction:column;gap:18px;">
+
+        <!-- Description (required) -->
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:12.5px;font-weight:600;color:var(--ink-800);">Description <span style="color:#e0463b;">*</span></label>
+          <textarea value="{{ cf.description }}" onChange="{{ onDescription }}" placeholder="Description" rows="3" style="border:1px solid var(--neutral-200);border-radius:7px;padding:10px 12px;font-size:13.5px;font-family:var(--font-body);color:var(--ink-900);outline:none;resize:vertical;min-height:76px;line-height:1.5;" style-focus="border-color:#2f6fed;box-shadow:0 0 0 3px rgba(47,111,237,.15)"></textarea>
+        </div>
+
+        <!-- Forward to -->
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:12.5px;font-weight:600;color:var(--ink-800);">Forward Calls To <span style="color:#e0463b;">*</span></label>
+          <select value="{{ cf.to }}" onChange="{{ onTo }}" style="height:40px;border:1px solid var(--neutral-200);border-radius:7px;padding:0 12px;font-size:13.5px;font-family:var(--font-body);color:var(--ink-900);background:#fff;outline:none;cursor:pointer;" style-focus="border-color:#2f6fed;box-shadow:0 0 0 3px rgba(47,111,237,.15)">
+            <option value="">Select a number…</option>
+            <option value="+15555551212">+1 (555) 555-1212</option>
+            <option value="+15555550100">+1 (555) 555-0100</option>
+            <option value="+15555550148">+1 (555) 555-0148</option>
+            <option value="+15555550172">+1 (555) 555-0172</option>
+            <option value="+15555550199">+1 (555) 555-0199</option>
+          </select>
+        </div>
+
+        <!-- Caller ID (from) -->
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:12.5px;font-weight:600;color:var(--ink-800);">Caller ID</label>
+          <input value="{{ cf.from }}" disabled="{{ dimTrue }}" placeholder="+15555555555" style="height:40px;border:1px solid var(--neutral-200);border-radius:7px;padding:0 12px;font-size:13.5px;font-family:var(--font-body);color:var(--neutral-400);background:var(--neutral-100);cursor:not-allowed;outline:none;" />
+        </div>
+
+        <!-- Privacy toggle -->
+        <div style="display:flex;align-items:center;justify-content:flex-start;gap:12px;padding:13px 14px;border:1px solid var(--neutral-150);border-radius:8px;background:var(--neutral-50);">
+          <div onClick="{{ togglePrivacy }}" style="flex:none;width:42px;height:24px;border-radius:999px;background:{{ privacyTrack }};position:relative;cursor:pointer;transition:background .15s;">
+            <div style="position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:var(--shadow-xs);transform:{{ privacyKnob }};transition:transform .15s;"></div>
+          </div>
+          <div style="min-width:0;">
+            <div style="font-size:13px;font-weight:600;color:var(--ink-900);">Hide Caller ID</div>
+            <div style="font-size:11.5px;color:var(--neutral-500);margin-top:1px;">Hide the caller ID presented to the recipient. Use the Caller Display Name field to customize the displayed name, if supported.</div>
+          </div>
+        </div>
+
+        <!-- Caller display name -->
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:12.5px;font-weight:600;color:var(--ink-800);">Caller Display Name</label>
+          <span style="font-size:11.5px;color:var(--neutral-500);line-height:1.5;">The caller display name to use when the call is created.</span>
+          <input value="{{ cf.callerDisplayName }}" onChange="{{ onName }}" maxlength="256" placeholder="Caller display name" style="height:40px;border:1px solid var(--neutral-200);border-radius:7px;padding:0 12px;font-size:13.5px;font-family:var(--font-body);color:var(--ink-900);outline:none;" style-focus="border-color:#2f6fed;box-shadow:0 0 0 3px rgba(47,111,237,.15)" />
+        </div>
+
+        <!-- Call timeout -->
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:12.5px;font-weight:600;color:var(--ink-800);">Ring Timeout</label>
+          <span style="font-size:11.5px;color:var(--neutral-500);line-height:1.5;">Set how long the destination phone rings before the call is treated as unanswered.</span>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <input type="number" min="1" max="300" value="{{ cf.callTimeout }}" onChange="{{ onTimeout }}" style="width:96px;height:40px;border:1px solid var(--neutral-200);border-radius:7px;padding:0 12px;font-size:13.5px;font-family:var(--font-body);color:var(--ink-900);outline:none;" style-focus="border-color:#2f6fed;box-shadow:0 0 0 3px rgba(47,111,237,.15)" />
+            <span style="font-size:12.5px;color:var(--neutral-500);">Second(s) (Range 1-300)</span>
+          </div>
+        </div>
+
+        <!-- Limit Workflow Looping -->
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:12.5px;font-weight:600;color:var(--ink-800);">Limit Workflow Looping</label>
+          <span style="font-size:11.5px;color:var(--neutral-500);line-height:1.5;">If your workflow logic loops around multiple times, you can limit the number of retries to avoid an infinite loop, which could annoy subscribers with repetitive automated messages.</span>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <input type="number" min="0" value="{{ cf.maxLoops }}" disabled="{{ dimTrue }}" placeholder="e.g. 3" style="width:96px;height:40px;border:1px solid var(--neutral-200);border-radius:7px;padding:0 12px;font-size:13.5px;font-family:var(--font-body);color:var(--neutral-400);background:var(--neutral-100);cursor:not-allowed;outline:none;" />
+            <span style="font-size:12.5px;color:var(--neutral-500);">Time(s)</span>
+          </div>
+        </div>
+        </div>
+
+        <!-- UUI -->
+
+        <!-- actions -->
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:8px;padding-bottom:4px;">
+          <button onClick="{{ openSpec }}" title="View spec" style="display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 16px;border:1px solid var(--neutral-200);background:#fff;border-radius:999px;font-size:13px;font-weight:600;font-family:var(--font-body);color:var(--ink-800);cursor:pointer;" style-hover="background:var(--neutral-50);border-color:#2f6fed;color:#2f6fed">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg>
+            Spec
+          </button>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <button onClick="{{ closeModal }}" style="height:40px;padding:0 20px;border:1px solid var(--neutral-200);background:#fff;border-radius:999px;font-size:13.5px;font-weight:600;font-family:var(--font-body);color:var(--ink-800);cursor:pointer;" style-hover="background:var(--neutral-50)">Cancel</button>
+            <button onClick="{{ saveConfig }}" style="height:40px;padding:0 24px;border:none;background:#2f6fed;border-radius:999px;font-size:13.5px;font-weight:600;font-family:var(--font-body);color:#fff;cursor:pointer;" style-hover="background:#1c4fc0">Save</button>
+          </div>
+        </div>
+
+      </div>
+
+  </div>
+
+  <!-- ===== FORWARD CALL SPEC MODAL ===== -->
+  <sc-if value="{{ specOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeSpec }}" style="position:absolute;inset:0;background:rgba(15,23,42,.45);display:flex;align-items:center;justify-content:center;padding:40px;z-index:90;">
+      <div onClick="{{ stop }}" style="width:min(1080px,100%);max-height:100%;background:#fff;border-radius:14px;box-shadow:0 30px 80px rgba(15,23,42,.3);display:flex;flex-direction:column;overflow:hidden;">
+
+        <!-- modal header -->
+        <div style="flex:none;display:flex;align-items:flex-start;gap:14px;padding:22px 26px;border-bottom:1px solid var(--neutral-150);">
+          <div style="flex:1;min-width:0;">
+            <div style="font-size:19px;font-weight:700;color:var(--ink-900);">Forward Call — Field Specification</div>
+            <div style="font-size:13px;color:var(--neutral-600);margin-top:5px;line-height:1.55;">Input component, character limits, default, validation, and error message for each option.</div>
+          </div>
+          <button onClick="{{ closeSpec }}" style="flex:none;width:34px;height:34px;border:none;background:none;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--neutral-500);" style-hover="background:var(--neutral-100)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+
+        <!-- modal body -->
+        <div style="flex:1;overflow-y:auto;padding:0;">
+          <table style="width:100%;border-collapse:collapse;font-size:13px;">
+            <thead>
+              <tr style="background:var(--neutral-50);position:sticky;top:0;z-index:1;">
+                <th style="text-align:left;padding:13px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--neutral-500);border-bottom:1px solid var(--neutral-200);width:16%;">Option Name</th>
+                <th style="text-align:left;padding:13px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--neutral-500);border-bottom:1px solid var(--neutral-200);width:12%;">Component</th>
+                <th style="text-align:left;padding:13px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--neutral-500);border-bottom:1px solid var(--neutral-200);width:12%;">Character Limit</th>
+                <th style="text-align:left;padding:13px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--neutral-500);border-bottom:1px solid var(--neutral-200);width:11%;">Default</th>
+                <th style="text-align:left;padding:13px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--neutral-500);border-bottom:1px solid var(--neutral-200);width:25%;">Validation</th>
+                <th style="text-align:left;padding:13px 16px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--neutral-500);border-bottom:1px solid var(--neutral-200);width:24%;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <sc-for list="{{ specRows }}" as="row" hint-placeholder-count="7">
+                <tr style="border-bottom:1px solid var(--neutral-150);vertical-align:top;">
+                  <td style="padding:15px 16px;">
+                    <div style="font-weight:600;color:var(--ink-900);">{{ row.name }}</div>
+                    <span style="display:inline-block;margin-top:6px;font-size:10.5px;font-weight:700;border-radius:5px;padding:2px 8px;color:{{ row.reqColor }};background:{{ row.reqBg }};">{{ row.req }}</span>
+                  </td>
+                  <td style="padding:15px 16px;color:var(--ink-800);">{{ row.component }}</td>
+                  <td style="padding:15px 16px;color:var(--ink-800);">{{ row.limit }}</td>
+                  <td style="padding:15px 16px;color:var(--ink-800);">{{ row.default }}</td>
+                  <td style="padding:15px 16px;color:var(--neutral-600);line-height:1.55;">
+                    <div>{{ row.validation }}</div>
+                    <sc-if value="{{ row.hasError }}" hint-placeholder-val="{{ false }}">
+                      <div style="margin-top:8px;display:flex;align-items:flex-start;gap:6px;background:#fdf0ef;border:1px solid #f4cfcb;border-radius:6px;padding:7px 9px;">
+                        <span style="color:#b23b32;font-size:12px;line-height:1.45;">{{ row.error }}</span>
+                      </div>
+                    </sc-if>
+                  </td>
+                  <td style="padding:15px 16px;color:var(--neutral-600);line-height:1.55;">{{ row.description }}</td>
+                </tr>
+              </sc-for>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- modal footer -->
+        <div style="flex:none;display:flex;align-items:center;justify-content:flex-end;padding:14px 26px;border-top:1px solid var(--neutral-150);">
+          <button onClick="{{ closeSpec }}" style="height:40px;padding:0 22px;border:none;background:#2f6fed;border-radius:999px;font-size:13.5px;font-weight:600;font-family:var(--font-body);color:#fff;cursor:pointer;" style-hover="background:#1c4fc0">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { zoom: 1, panelOpen: true, droppedNodes: [], dragActive: false, selectedId: null, cf: this.cfDefaults(), connections: [], dragConn: null, specOpen: false, triggerNode: { id: "trigger", left: 560, top: 300, label: "Contact Trigger" } };
+
+  // resolve any node (trigger or dropped) by id
+  getNodeById(id) {
+    if (this.state.triggerNode.id === id) return this.state.triggerNode;
+    return this.state.droppedNodes.find(n => n.id === id) || null;
+  }
+
+  // geometry of a node's input (top) and output (bottom) ports, in layer px
+  nodePorts(n) {
+    const cx = n.left + 127;        // node width 255 -> half
+    const top = n.top;              // top connector
+    const bottom = n.top + 64;      // card bottom (ports straddle this edge)
+    const input = { x: cx, y: top };
+    let outputs;
+    if (n.label === "Forward Call") {
+      outputs = [-52, -26, 0, 26, 52].map(o => ({ x: cx + o, y: bottom }));
+    } else {
+      outputs = [{ x: cx, y: bottom }];
+    }
+    return { input, outputs };
+  }
+
+  // start dragging a connection from an output port
+  startConn(n, portIndex, e) {
+    e.stopPropagation();
+    e.preventDefault();
+    const fp = this.nodePorts(n).outputs[portIndex] || this.nodePorts(n).outputs[0];
+    this.setState({ dragConn: { fromNodeId: n.id, portIndex, fromX: fp.x, fromY: fp.y, x: fp.x, y: fp.y } });
+    const canvas = document.querySelector("[data-canvas]");
+    const onMove = (ev) => {
+      const rect = canvas.getBoundingClientRect();
+      const { lx, ly } = this.toLayerCoords(rect, ev.clientX, ev.clientY);
+      this.setState(s => (s.dragConn ? { dragConn: { ...s.dragConn, x: lx, y: ly } } : null));
+    };
+    const onUp = (ev) => {
+      document.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseup", onUp);
+      const rect = canvas.getBoundingClientRect();
+      const { lx, ly } = this.toLayerCoords(rect, ev.clientX, ev.clientY);
+      let target = null, best = 24;
+      this.state.droppedNodes.forEach(nd => {
+        if (nd.id === n.id) return;
+        const ip = this.nodePorts(nd).input;
+        const dist = Math.hypot(ip.x - lx, ip.y - ly);
+        if (dist < best) { best = dist; target = nd; }
+      });
+      if (target) {
+        this.setState(s => ({
+          dragConn: null,
+          connections: [...s.connections, { id: Date.now(), from: { nodeId: n.id, portIndex }, to: { nodeId: target.id } }],
+        }));
+      } else {
+        this.setState({ dragConn: null });
+      }
+    };
+    document.addEventListener("mousemove", onMove);
+    document.addEventListener("mouseup", onUp);
+  }
+
+  // Bandwidth <Forward> verb defaults
+  cfDefaults() {
+    return { to: "", from: "", privacy: false, callerDisplayName: "", callTimeout: 30, diversionTreatment: "none", diversionReason: "unknown", uui: "", description: "", maxLoops: 1 };
+  }
+  setCf(k, v) { this.setState(s => ({ cf: { ...s.cf, [k]: v } })); }
+
+  // map a drop point (client coords) into the scaled nodes-layer coords
+  toLayerCoords(rect, clientX, clientY) {
+    const dx = clientX - rect.left;
+    const dy = clientY - rect.top;
+    const zoom = this.state.zoom;
+    const cx = rect.width / 2; // transform-origin: center top
+    const lx = cx + (dx - cx) / zoom;
+    const ly = dy / zoom;
+    return { lx, ly };
+  }
+
+  componentDidMount() { this.wireCards(); }
+  componentDidUpdate() { this.wireCards(); }
+
+  // make every action card in the panel draggable (event delegation, idempotent)
+  wireCards() {
+    const panel = document.querySelector("[data-action-panel]");
+    if (!panel) return;
+    const cards = [...panel.querySelectorAll("div")].filter(d => {
+      const k = d.children;
+      return k.length === 2 && k[0].tagName && k[0].tagName.toLowerCase() === "svg" && k[1].tagName === "SPAN";
+    });
+    cards.forEach(card => {
+      if (card.dataset.dragWired) return;
+      card.dataset.dragWired = "1";
+      card.setAttribute("draggable", "true");
+      card.style.cursor = "grab";
+      card.addEventListener("dragstart", (e) => {
+        const svg = card.querySelector("svg");
+        const span = card.querySelector("span");
+        this._dragPayload = {
+          label: span ? span.textContent.trim() : "Action",
+          svgHtml: svg ? svg.outerHTML : "",
+        };
+        e.dataTransfer.setData("text/plain", "action");
+        e.dataTransfer.effectAllowed = "copy";
+        this.setState({ dragActive: true });
+      });
+      card.addEventListener("dragend", () => this.setState({ dragActive: false }));
+    });
+  }
+
+  // pointer-drag a placed tile to reposition it (zoom-aware)
+  startMove(n, e) {
+    if (e.button !== 0) return;
+    e.stopPropagation();
+    e.preventDefault();
+    if (n.label === "Forward Call") this.setState({ selectedId: n.id, cf: { ...this.cfDefaults(), ...(n.config || {}) } });
+    else this.setState({ selectedId: n.id });
+    const startX = e.clientX, startY = e.clientY;
+    const origLeft = n.left, origTop = n.top;
+    const zoom = this.state.zoom;
+    const isTrigger = n.id === this.state.triggerNode.id;
+    const onMove = (ev) => {
+      const dx = (ev.clientX - startX) / zoom;
+      const dy = (ev.clientY - startY) / zoom;
+      if (isTrigger) {
+        this.setState(s => ({ triggerNode: { ...s.triggerNode, left: Math.round(origLeft + dx), top: Math.round(origTop + dy) } }));
+      } else {
+        this.setState(s => ({
+          droppedNodes: s.droppedNodes.map(d =>
+            d.id === n.id ? { ...d, left: Math.round(origLeft + dx), top: Math.round(origTop + dy) } : d
+          ),
+        }));
+      }
+    };
+    const onUp = () => {
+      document.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseup", onUp);
+    };
+    document.addEventListener("mousemove", onMove);
+    document.addEventListener("mouseup", onUp);
+  }
+
+  specRows() {
+    const REQ = { req: "Required", reqColor: "#fff", reqBg: "#e0463b" };
+    const OPT = { req: "Optional", reqColor: "var(--ink-800)", reqBg: "var(--neutral-150)" };
+    return [
+      { ...REQ, name: "Description", component: "Textarea", limit: "1–200 characters", default: "힌트문구: Description",
+        validation: "미 입력", hasError: true,
+        error: "This is required.",
+        description: "Internal label describing what this Forward Call step does within the workflow." },
+      { ...REQ, name: "Forward Calls To", component: "Dropdown (select)", limit: "—", default: "None selected",
+        validation: "선택하지 않음", hasError: true,
+        error: "This is required.",
+        description: "The destination phone number that the incoming call is forwarded to." },
+      { ...OPT, name: "Caller ID", component: "Input (read-only)", limit: "—", default: "System value",
+        validation: "Auto-populated and non-editable. No user input.", hasError: false, error: "",
+        description: "The caller ID presented on the forwarded leg. Managed by the system; cannot be edited." },
+      { ...OPT, name: "Hide Caller ID", component: "Toggle", limit: "—", default: "Off",
+        validation: "Boolean. Defaults to Off.", hasError: false, error: "",
+        description: "When on, hides the caller ID presented to the recipient (privacy=\"true\")." },
+      { ...OPT, name: "Caller Display Name", component: "Input (text)", limit: "Max 256 characters", default: "공란",
+        validation: "Optional. Must be ≤ 256 characters.", hasError: true,
+        error: "Caller display name must be 256 characters or fewer.",
+        description: "Custom display name shown to the recipient when the call is created." },
+      { ...REQ, name: "Ring Timeout", component: "Number input", limit: "Integer 1–300", default: "30",
+        validation: "Required. Integer between 1 and 300 seconds. Default 30.", hasError: true,
+        error: "Ring timeout must be a whole number between 1 and 300.",
+        description: "How long the destination phone rings before the call is treated as unanswered." },
+      { ...OPT, name: "Limit Workflow Looping", component: "Dropdown (select)", limit: "Integer 1–99", default: "1",
+        validation: "Optional. Integer between 1 and 99. Default 1.", hasError: true,
+        error: "Loop limit must be a whole number between 1 and 99.",
+        description: "Caps how many times this step may re-run to prevent infinite loops and repetitive messages." },
+    ];
+  }
+
+  renderVals() {
+    const { zoom, panelOpen, droppedNodes, dragActive, selectedId, cf, connections, dragConn } = this.state;
+
+    // ----- connection lines (SVG overlay) -----
+    const mkPath = (a, b) => {
+      const dy = Math.max(40, Math.abs(b.y - a.y) / 2);
+      return "M " + a.x + " " + a.y + " C " + a.x + " " + (a.y + dy) + " " + b.x + " " + (b.y - dy) + " " + b.x + " " + b.y;
+    };
+    const paths = [];
+    connections.forEach(c => {
+      const fromN = this.getNodeById(c.from.nodeId);
+      const toN = this.getNodeById(c.to.nodeId);
+      if (!fromN || !toN) return;
+      const outs = this.nodePorts(fromN).outputs;
+      const fp = outs[c.from.portIndex] || outs[0];
+      const tp = this.nodePorts(toN).input;
+      paths.push(React.createElement("path", { key: c.id, d: mkPath(fp, tp), fill: "none", stroke: "#94a3b8", strokeWidth: 2 }));
+      paths.push(React.createElement("circle", { key: c.id + "-d", cx: tp.x, cy: tp.y, r: 3.5, fill: "#94a3b8" }));
+    });
+    if (dragConn) {
+      paths.push(React.createElement("path", { key: "drag", d: mkPath({ x: dragConn.fromX, y: dragConn.fromY }, { x: dragConn.x, y: dragConn.y }), fill: "none", stroke: "#2f6fed", strokeWidth: 2, strokeDasharray: "5 4" }));
+    }
+    const connectionsSvg = React.createElement("svg", { style: { position: "absolute", left: 0, top: 0, width: "4000px", height: "4000px", overflow: "visible", pointerEvents: "none" } }, paths);
+    const selectedNode = droppedNodes.find(n => n.id === selectedId) || null;
+    const isCF = !!(selectedNode && selectedNode.label === "Forward Call");
+    let attrs = 'to="' + (cf.to || "+1...") + '"';
+    if (cf.from) attrs += ' from="' + cf.from + '"';
+    if (cf.privacy) attrs += ' privacy="true"';
+    if (cf.callerDisplayName) attrs += ' callerDisplayName="' + cf.callerDisplayName + '"';
+    attrs += ' callTimeout="' + cf.callTimeout + '"';
+    if (cf.diversionTreatment !== "none") attrs += ' diversionTreatment="' + cf.diversionTreatment + '"';
+    if (cf.diversionTreatment === "stack") attrs += ' diversionReason="' + cf.diversionReason + '"';
+    if (cf.uui) attrs += ' uui="' + cf.uui + '"';
+    const bxmlPreview = "<Response>\n  <Forward " + attrs + "/>\n</Response>";
+    const nodeViews = droppedNodes.map(n => {
+      const selected = n.id === selectedId;
+      const portMeta = n.label === "Forward Call"
+        ? [["Success", "#16a34a"], ["No Answer", "#9aa7b5"], ["Busy", "#9aa7b5"], ["Decline", "#9aa7b5"], ["Failed", "#e0463b"]]
+        : [["Output", "#9aa7b5"]];
+      return {
+        ...n,
+        selected,
+        isCF: n.label === "Forward Call",
+        notCF: n.label !== "Forward Call",
+        showSinglePort: n.label !== "Forward Call" && n.label !== "End",
+        subtitle: (n.label === "Forward Call" && n.config && n.config.to) ? ("Forward to " + n.config.to) : (["End", "Hang up"].includes(n.label) ? "" : "Click to configure"),
+        outPorts: portMeta.map((m, i) => ({ name: m[0], color: m[1], onDown: (e) => this.startConn(n, i, e) })),
+        onSinglePortDown: (e) => this.startConn(n, 0, e),
+        deleteDisplay: selected ? "flex" : "none",
+        borderColor: selected ? "#2f6fed" : "var(--neutral-200)",
+        shadow: selected ? "0 0 0 2px rgba(47,111,237,.25), var(--shadow-sm)" : "var(--shadow-sm)",
+        onSelect: (e) => {
+          e.stopPropagation();
+          if (n.label === "Forward Call") this.setState({ selectedId: n.id, cf: { ...this.cfDefaults(), ...(n.config || {}) } });
+          else this.setState({ selectedId: n.id });
+        },
+        onMoveStart: (e) => this.startMove(n, e),
+        onDelete: (e) => {
+          e.stopPropagation();
+          this.setState(s => ({
+            droppedNodes: s.droppedNodes.filter(d => d.id !== n.id),
+            selectedId: null,
+          }));
+        },
+      };
+    });
+    return {
+      dimTrue: true,
+      specOpen: this.state.specOpen,
+      specRows: this.specRows(),
+      openSpec: () => this.setState({ specOpen: true }),
+      closeSpec: () => this.setState({ specOpen: false }),
+      stop: (e) => e.stopPropagation(),
+      nodesTransform: "scale(" + zoom + ")",
+      panelWidth: panelOpen ? "332px" : "0px",
+      chevronTransform: panelOpen ? "rotate(0deg)" : "rotate(180deg)",
+      tileCount: 1 + droppedNodes.length,
+      droppedNodes: nodeViews,
+      connectionsSvg,
+      trigger: {
+        ...this.state.triggerNode,
+        onMoveStart: (e) => this.startMove(this.state.triggerNode, e),
+        onPortDown: (e) => this.startConn(this.state.triggerNode, 0, e),
+      },
+      dropOutline: dragActive ? "2.5px dashed #2f6fed" : "none",
+
+      // ----- Call Forward config drawer -----
+      cf,
+      modalTransform: isCF ? "translateX(0)" : "translateX(100%)",
+      privacyTrack: cf.privacy ? "#2f6fed" : "var(--neutral-300)",
+      privacyKnob: cf.privacy ? "translateX(18px)" : "translateX(0)",
+      nameHint: cf.privacy ? "With privacy on, only Restricted / Anonymous / Private / Unavailable are valid." : "Up to 256 characters.",
+      showReason: cf.diversionTreatment === "stack",
+      bxmlPreview,
+      onTo: (e) => this.setCf("to", e.target.value),
+      onFrom: (e) => this.setCf("from", e.target.value),
+      onName: (e) => this.setCf("callerDisplayName", e.target.value),
+      onTimeout: (e) => this.setCf("callTimeout", e.target.value),
+      onTreatment: (e) => this.setCf("diversionTreatment", e.target.value),
+      onReason: (e) => this.setCf("diversionReason", e.target.value),
+      onUui: (e) => this.setCf("uui", e.target.value),
+      onDescription: (e) => this.setCf("description", e.target.value),
+      onMaxLoops: (e) => this.setCf("maxLoops", e.target.value),
+      togglePrivacy: () => this.setCf("privacy", !this.state.cf.privacy),
+      closeModal: () => this.setState({ selectedId: null }),
+      saveConfig: () => this.setState(s => ({
+        droppedNodes: s.droppedNodes.map(d => d.id === s.selectedId ? { ...d, config: { ...s.cf } } : d),
+        selectedId: null,
+      })),
+      zoomIn: () => this.setState(s => ({ zoom: Math.min(1.6, +(s.zoom + 0.1).toFixed(2)) })),
+      zoomOut: () => this.setState(s => ({ zoom: Math.max(0.5, +(s.zoom - 0.1).toFixed(2)) })),
+      resetZoom: () => this.setState({ zoom: 1 }),
+      togglePanel: () => this.setState(s => ({ panelOpen: !s.panelOpen })),
+
+      onCanvasClick: () => { if (this.state.selectedId !== null) this.setState({ selectedId: null }); },
+      onCanvasDragOver: (e) => { e.preventDefault(); e.dataTransfer.dropEffect = "copy"; },
+      onCanvasDrop: (e) => {
+        e.preventDefault();
+        if (e.dataTransfer.getData("text/plain") !== "action") { this.setState({ dragActive: false }); return; }
+        const p = this._dragPayload || { label: "Action", svgHtml: "" };
+        const iconHtml = (p.svgHtml || "").replace(/#9aa7b5/g, "#ffffff");
+        const { lx, ly } = this.toLayerCoords(e.currentTarget.getBoundingClientRect(), e.clientX, e.clientY);
+        this.setState(s => ({
+          dragActive: false,
+          droppedNodes: [
+            ...s.droppedNodes,
+            { id: Date.now(), left: Math.round(lx - 127), top: Math.round(ly - 32), num: 3 + s.droppedNodes.length, label: p.label, iconHtml: { __html: iconHtml } },
+          ],
+        }));
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>
